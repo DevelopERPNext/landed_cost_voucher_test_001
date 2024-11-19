@@ -227,3 +227,49 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+
+
+# ================================  Adding =====================================
+
+
+app_include_css = "/assets/landed_cost_voucher_test_001/css/font_style.css"
+
+
+# override_doctype_class = {
+#     "Work Order": "landed_cost_voucher_test_001.overrides.work_order.CustomWorkOrder",
+# }
+
+
+doc_events = {
+    "Landed Cost Voucher": {
+        "validate": [
+            "landed_cost_voucher_test_001.landed_cost_voucher_test_001.landed_cost_voucher_py.create_journal_entry_from_lcv_on_validate",
+            # "landed_cost_voucher_test_001.landed_cost_voucher_test_001.landed_cost_voucher_py.create_journal_entry_from_lcv",
+        ],
+    },
+}
+
+
+doctype_js = {
+    "Landed Cost Voucher": "public/js/landed_cost_voucher_js.js",
+}
+
+
+doctype_list_js = {
+    "Landed Cost Voucher": "public/js/landed_cost_voucher_js.js",
+}
+
+# Landed Cost Voucher Test 001
+# landed_cost_voucher_test_001
+
+fixtures = [{"dt": "Custom Field", "filters": [["module", "=", "Landed Cost Voucher Test 001"]]}]
+
+
+
+
+
+
+
+
+
